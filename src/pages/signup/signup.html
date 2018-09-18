@@ -33,7 +33,7 @@
     </div>
     <div padding></div>
             <div padding>
-            <button ion-button color="secondary" full round type="submit">Login</button> 
+            <button ion-button color="secondary" full round type="submit" [disabled]="!signupForm.valid">Login</button> 
         </div>
   </form>
 

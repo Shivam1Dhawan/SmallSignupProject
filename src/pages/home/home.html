@@ -5,10 +5,44 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  
-  <p>
+  <ion-card *ngFor="let char of characterdetail">
+    <ion-grid>
+     <ion-row>   
+          <ion-item class="item-card">
+        <ion-col col-1 class="abc">
+           <ion-avatar item-start>
+              <img src={{char.url}}>
+            </ion-avatar>
+        </ion-col>
+        <ion-col col-6 class="abc">
+         <h2>{{char.name}}</h2>
+         <p>Posted on  September 18,2018</p>
+          </ion-col>
+        </ion-item>
+        </ion-row>
+     <ion-row>
+       <ion-col>
+          <img src={{char.url}}>
+       </ion-col>
+      </ion-row>
+     <ion-row>
+       <ion-col>
+         <button ion-button icon-start clear small>
+          <ion-icon name="thumbs-up"></ion-icon>
+           <div>{{char.likes}} likes</div>
+         </button>
+       </ion-col>
+       <ion-col>
+        <button ion-button icon-start clear small>
+           <ion-icon name="text"></ion-icon>
+           <div>{{char.Comments}} Comments</div>
+         </button>
+       </ion-col>
+     </ion-row>
+    </ion-grid>
+  </ion-card>
+  <!-- <p>
     {{this.det.value.name}}
   </p>
   <p>
@@ -16,5 +50,5 @@
   </p>
   <p>
     {{this.det.value.residence}}
-  </p>
+  </p> -->
 </ion-content>
